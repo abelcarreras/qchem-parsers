@@ -52,7 +52,6 @@ def get_cis_occupations_list(number_of_orbitals,
             'beta': beta_occupation}
 
 
-
 def standardize_vector(vector):
     import numpy as np
     if vector[0] != 0:

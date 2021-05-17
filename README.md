@@ -19,6 +19,44 @@ with open('output_file.out') as f:
 molecule = parser_optimization(qc_output)
 ```
 
+Version system
+--------------
+As optional feature the parsers can include a docstring with
+the list of compatible Q-Chem versions. 
+
+```python
+def parser_basic(output):
+    """
+    This showcases the format of  Q-Chem version parser compatibility.
+    Just create a docstring with the following line:
+
+    compatibility: 5.1, 5.2+
+
+    more text can be added to the docstring 
+
+    """
+
+```
+This information can be extracted using provided helper functions
+
+```python
+from qcparsers.tools.version import get_version_output
+from qcparsers.tools.version import get_compatibility_list_from_parser
+from qcparsers.parsers import parser_basic
+
+
+with open('output_file.out') as f:
+    output = f.read()
+
+version = get_version_output(output)
+compatibility_list = get_compatibility_list_from_parser(parser_basic)
+
+if version in compatibility_list:
+    print('Parser compatible')
+else:
+    print('Parser not compatible')
+```
+
 How to contribute
 -----------------
 Collaboration is welcomed. 

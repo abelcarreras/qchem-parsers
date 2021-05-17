@@ -9,8 +9,7 @@ def parser_basic(output):
 
     compatibility: 5.1, 5.2+
 
-    will activate the check for parser-qchem version compatibility.
-    If they are not compatible a warning will rise.
+    more text information can be added to the docstring
 
     """
     data_dict = {}
