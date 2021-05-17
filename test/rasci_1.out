@@ -1,0 +1,521 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.2 (devel), Q-Chem, Inc., Pleasanton, CA (2019)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,
+ J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,
+ J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,
+ P. H. P. Harbach,  A. W. Hauser,  J. E. Herr,  E. G. Hohenstein,
+ Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  Hyunjun Ji,
+ B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,
+ E. Livshits,  A. Luenser,  P. Manohar,  E. Mansoor,  S. F. Manzer,
+ Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  A. V. Marenich,
+ T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  N. J. Mayhall,
+ S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  J. W. Mullinax,  K. Nanda,
+ T. S. Nguyen-Beck,  R. Olivares-Amaya,  J. A. Parkhill,  T. M. Perrine,
+ F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  D. R. Rehn,
+ F. Rob,  M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,
+ D. W. Small,  T. Stauch,  T. Stein,  Yu-Chuan Su,  A. J. W. Thom,
+ A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,
+ Jeng-Da Chai,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above:
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.2.0 for Mac (Intel) OS X
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon May 10 17:15:41 2021
+
+Host:
+0
+
+     Scratch files written to /Users/abel/Scratch/export/pyqchem_1703//
+Core orbitals will be frozen
+Input Ideriv = 0
+Curr. Ideriv = -1
+Max.  Ideriv = 0
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0 1
+C	        0.6695000000         0.0000000000         0.0000000000
+C	       -0.6695000000         0.0000000000         0.0000000000
+H	        1.2321000000         0.9289000000         0.0000000000
+H	        1.2321000000        -0.9289000000         0.0000000000
+H	       -1.2321000000         0.9289000000         0.0000000000
+H	       -1.2321000000        -0.9289000000         0.0000000000
+$end
+$rem
+jobtype sp
+exchange hf
+basis sto-3g
+thresh 14
+scf_convergence 8
+scf_algorithm diis
+max_scf_cycles 50
+gui 2
+set_iter 30
+RPA False
+mem_total 2000
+mem_static 64
+n_frozen_virtual 0
+mom_start False
+skip_scfman False
+scf_guess_mix False
+correlation rasci
+ras_roots 8
+ras_do_hole True
+ras_do_part True
+ras_occ 6
+ras_spin_mult 1
+ras_print 1
+ras_natorb False
+ras_sts_tm False
+ras_elec 4
+ras_act 6
+cis_convergence 6
+symmetry True
+sym_ignore False
+sym_tol 5
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.6695000000     0.0000000000    -0.0000000000
+    2      C      -0.6695000000    -0.0000000000     0.0000000000
+    3      H       1.2321000000     0.9289000000    -0.0000000000
+    4      H       1.2321000000    -0.9289000000    -0.0000000000
+    5      H      -1.2321000000     0.9289000000     0.0000000000
+    6      H      -1.2321000000    -0.9289000000     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D2h   NOp =  8
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =    33.2650904736 hartrees
+ There are        8 alpha and        8 beta electrons
+ Requested basis set is STO-3G
+ There are 8 shells and 14 basis functions
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size        63 MB
+ MEM_STATIC part        64 MB
+
+                       Distance Matrix (Angstroms)
+             C (  1)   C (  2)   H (  3)   H (  4)   H (  5)
+   C (  2)  1.339000
+   H (  3)  1.085990  2.116350
+   H (  4)  1.085990  2.116350  1.857800
+   H (  5)  2.116350  1.085990  2.464200  3.086050
+   H (  6)  2.116350  1.085990  3.086050  2.464200  1.857800
+
+ A cutoff of  1.0D-14 yielded     36 shell pairs
+ There are       117 function pairs
+
+ -------------------------------------------------------
+ OpenMP Integral Computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients                     0
+ long-range coefficients              100000000
+ Omega coefficients                           0
+ if combine SR and LR in K                    0
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                 45569
+ size of scratch memory is              1046100
+ max col of scratch BK array                289
+ max len of scratch array in speh3           22
+ max len of scratch index in speh4            8
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  1
+ order of int derivative is                   0
+ number of shells is                          8
+ number of basis is                          14
+ number of cartesian basis is                14
+ number of contracted shell pairs            36
+ number of primitive shell pairs            308
+ maxK2 (contraction) of shell pair            9
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair             12
+ max number of PS2 of shell pair            108
+ mem total for path MDJ                  505940
+ -------------------------------------------------------
+ Smallest overlap matrix eigenvalue = 1.92E-01
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000066 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 16.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -76.6384172658      2.74e-01
+    2     -77.0612052574      1.60e-02
+    3     -77.0714028555      4.00e-03
+    4     -77.0720873982      9.36e-05
+    5     -77.0720877940      8.36e-06
+    6     -77.0720877973      7.99e-07
+    7     -77.0720877973      1.17e-07
+    8     -77.0720877973      8.44e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 2.83s  wall 1.00s
+ SCF   energy in the final basis set =      -77.0720877973
+ Total energy in the final basis set =      -77.0720877973
+
+     ##========================================##
+     ||                                        ||
+     ||              R A S M A N 2             ||
+     ||________________________________________||
+     ||                                        ||
+     ||  Author:                               ||
+     ||                                        ||
+     ||        David Casanova (2010)           ||
+     ||                                        ||
+     ##========================================##
+
+  ***************************************************
+  *  RAS-CI Dimensions:                             *
+  *                                                 *
+  *  Active Elec.:   4 ( 2, 2)   Active Orb.:   6   *
+  *  Doubly Occ. :   6           Doubly Vir.:   2   *
+  *  Frozen Occ. :   2           Frozen Vir.:   0   *
+  *                                                 *
+  *  Total CI configurations:      2985             *
+  *    Active configurations:       225             *
+  *      Hole configurations:      2400             *
+  *  Particle configurations:       360             *
+  *                                                 *
+  *   Requested states:        8                    *
+  *  Spin multiplicity: Singlets                    *
+  *                                                 *
+  ***************************************************
+
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0           8      0.038152    0.006174
+   2         0           8      0.013916    0.002813
+   3         0           8      0.006949    0.001848
+   4         0           8      0.004753    0.001805
+   5         0           8      0.010329    0.004930
+   6         0           8      0.004665    0.002752
+   7         1           7      0.002093    0.001109
+   8         3           5      0.000782    0.000320
+   9         3           5      0.000310    0.000132
+  10         3           5      0.000107    0.000051
+  11         4           4      0.000036    0.000018
+  12         5           3      0.000013    0.000006
+  13         7           1      0.000006    0.000002
+  14         8           0      0.000005    0.000001    Roots Converged
+ ---------------------------------------------------
+
+**************************************************
+ RAS-CI total energy for state   1:    -77.144274215829
+  Excitation energy (eV) =    0.0000
+  Multiplicity: Singlet
+  Dipole Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 110000 |       |     0.9602196
+ |       | 101000 | 101000 |       |    -0.2439621
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  98.60
+                                 Hole:   1.37
+                                 Part:   0.02
+
+**************************************************
+ RAS-CI total energy for state   2:    -76.728641767207
+  Excitation energy (eV) =   11.3099
+  Multiplicity: Singlet
+  Dipole Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 011000 |       |     0.6712017
+ |       | 011000 | 110000 |       |     0.6712017
+ |   5   | 111000 | 101000 |       |     0.1565701
+ |   5   | 101000 | 111000 |       |     0.1565701
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  91.48
+                                 Hole:   7.75
+                                 Part:   0.77
+
+**************************************************
+ RAS-CI total energy for state   3:    -76.678485505155
+  Excitation energy (eV) =   12.6748
+  Multiplicity: Singlet
+  Dipole Moment:    0.0000 X     0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y     0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |   6   | 111000 | 110000 |       |    -0.6906502
+ |   6   | 110000 | 111000 |       |    -0.6906502
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:   1.33
+                                 Hole:  98.66
+                                 Part:   0.01
+
+**************************************************
+ RAS-CI total energy for state   4:    -76.641057850487
+  Excitation energy (eV) =   13.6932
+  Multiplicity: Singlet
+  Dipole Moment:    0.0000 X     0.0000 Y     0.0000 Z
+  Trans. Moment:   -1.4200 X     0.0000 Y     0.0000 Z
+  Strength   :  0.676475
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 101000 |       |     0.6924346
+ |       | 101000 | 110000 |       |     0.6924346
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  96.70
+                                 Hole:   3.20
+                                 Part:   0.09
+
+**************************************************
+ RAS-CI total energy for state   5:    -76.559854588095
+  Excitation energy (eV) =   15.9029
+  Multiplicity: Singlet
+  Dipole Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 100100 |       |     0.6776983
+ |       | 100100 | 110000 |       |     0.6776983
+ |       | 100000 | 101000 |  13   |     0.1277818
+ |       | 101000 | 100000 |  13   |     0.1277818
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  93.85
+                                 Hole:   2.65
+                                 Part:   3.50
+
+**************************************************
+ RAS-CI total energy for state   6:    -76.529643852288
+  Excitation energy (eV) =   16.7249
+  Multiplicity: Singlet
+  Dipole Moment:    0.0000 X    -0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y     0.1230 Z
+  Strength   :  0.006202
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 100010 |       |     0.5422786
+ |       | 101000 | 100001 |       |     0.2161861
+ |       | 100010 | 110000 |       |     0.5422786
+ |       | 100001 | 101000 |       |     0.2161861
+ |   4   | 111000 | 110000 |       |    -0.3135102
+ |   4   | 110000 | 111000 |       |    -0.3135102
+ |   6   | 111000 | 101000 |       |     0.1778419
+ |   6   | 101000 | 111000 |       |     0.1778419
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  69.02
+                                 Hole:  30.44
+                                 Part:   0.54
+
+**************************************************
+ RAS-CI total energy for state   7:    -76.498679493818
+  Excitation energy (eV) =   17.5675
+  Multiplicity: Singlet
+  Dipole Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Trans. Moment:    0.0000 X    -0.0000 Y    -0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 100001 |       |     0.6166381
+ |       | 101000 | 100010 |       |     0.2556504
+ |       | 100010 | 101000 |       |     0.2556504
+ |       | 100001 | 110000 |       |     0.6166381
+ |   3   | 111000 | 110000 |       |     0.1285919
+ |   3   | 110000 | 111000 |       |     0.1285919
+ |   4   | 111000 | 101000 |       |     0.1075448
+ |   4   | 101000 | 111000 |       |     0.1075448
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  89.95
+                                 Hole:   9.47
+                                 Part:   0.58
+
+**************************************************
+ RAS-CI total energy for state   8:    -76.457973329011
+  Excitation energy (eV) =   18.6752
+  Multiplicity: Singlet
+  Dipole Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y    -0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA  | BETA   | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 110000 | 110000 |       |     0.2399681
+ |       | 101000 | 101000 |       |     0.9398922
+--------------------------------------------------
+*** Contributions RASCI wfn    Active:  95.75
+                                 Hole:   3.94
+                                 Part:   0.31
+
+RAS-CI timing summary (seconds)
+  CPU time          2.90s
+  System time       0.00s
+  Wall time         1.73s
+
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --
+-11.020 -11.019  -0.976  -0.744  -0.602  -0.528  -0.463  -0.323
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u
+ -- Virtual --
+  0.317   0.631   0.687   0.691   0.939   0.978
+  1 B2g   2 B2u   4 Ag    3 B3u   2 B1g   4 B3u
+
+ Beta MOs, Restricted
+ -- Occupied --
+-11.020 -11.019  -0.976  -0.744  -0.602  -0.528  -0.463  -0.323
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u
+ -- Virtual --
+  0.317   0.631   0.687   0.691   0.939   0.978
+  1 B2g   2 B2u   4 Ag    3 B3u   2 B1g   4 B3u
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.124382
+      2 C                    -0.124382
+      3 H                     0.062191
+      4 H                     0.062191
+      5 H                     0.062191
+      6 H                     0.062191
+  ----------------------------------------
+  Sum of atomic charges =    -0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -11.9836     XY      -0.0000     YY     -11.7919
+        XZ      -0.0000     YZ       0.0000     ZZ     -13.4837
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ      -0.0000    XYZ      -0.0000
+       YYZ      -0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -64.0171   XXXY      -0.0000   XXYY     -12.4605
+      XYYY      -0.0000   YYYY     -24.0855   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ      -0.0000
+      XXZZ     -12.9474   XYZZ      -0.0000   YYZZ      -6.3554
+      XZZZ       0.0000   YZZZ      -0.0000   ZZZZ     -10.8985
+ -----------------------------------------------------------------
+Archival summary:
+1\1\Aeria.local\SP\ProcedureUnspecified\STO-3G\24\MonMay1017:15:442021MonMay1017:15:442021\0\\#,ProcedureUnspecified,STO-3G,\\0,1\C\H,1,1.08599\H,1,1.08599,2,117.597\C,1,1.339,2,121.202,3,-180,0\H,4,1.08599,1,121.202,2,-0,0\H,4,1.08599,1,121.202,2,-180,0\\HF=-73.1163571\\@
+
+ Total job time:  3.02s(wall), 7.00s(cpu)
+ Mon May 10 17:15:44 2021
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+

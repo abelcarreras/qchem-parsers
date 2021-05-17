@@ -1,0 +1,616 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.2 (devel), Q-Chem, Inc., Pleasanton, CA (2019)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,
+ J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,
+ J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,
+ P. H. P. Harbach,  A. W. Hauser,  J. E. Herr,  E. G. Hohenstein,
+ Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  Hyunjun Ji,
+ B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,
+ E. Livshits,  A. Luenser,  P. Manohar,  E. Mansoor,  S. F. Manzer,
+ Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  A. V. Marenich,
+ T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  N. J. Mayhall,
+ S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  J. W. Mullinax,  K. Nanda,
+ T. S. Nguyen-Beck,  R. Olivares-Amaya,  J. A. Parkhill,  T. M. Perrine,
+ F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  D. R. Rehn,
+ F. Rob,  M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,
+ D. W. Small,  T. Stauch,  T. Stein,  Yu-Chuan Su,  A. J. W. Thom,
+ A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,
+ Jeng-Da Chai,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above:
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.2.0 for Mac (Intel) OS X
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon May 10 20:26:15 2021
+
+Host:
+0
+
+     Scratch files written to /Users/abel/Scratch/export/pyqchem_2708//
+Core orbitals will be frozen
+Input Ideriv = 0
+Curr. Ideriv = -1
+Max.  Ideriv = 0
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0 1
+C	        0.6695000000         0.0000000000         0.0000000000
+C	       -0.6695000000         0.0000000000         0.0000000000
+H	        1.2321000000         0.9289000000         0.0000000000
+H	        1.2321000000        -0.9289000000         0.0000000000
+H	       -1.2321000000         0.9289000000         0.0000000000
+H	       -1.2321000000        -0.9289000000         0.0000000000
+$end
+$rem
+jobtype sp
+exchange hf
+basis 6-31g
+thresh 14
+scf_convergence 8
+scf_algorithm diis
+max_scf_cycles 100
+gui 2
+set_iter 30
+RPA False
+mem_total 2000
+mem_static 64
+n_frozen_virtual 0
+mom_start False
+skip_scfman False
+scf_guess_mix False
+correlation rasci
+ras_roots 2
+ras_do_hole False
+ras_do_part False
+ras_occ 7
+ras_spin_mult 0
+ras_print 1
+ras_natorb False
+ras_sts_tm False
+ras_elec 2
+ras_act 4
+ras_srdft True
+ras_srdft_damp 0.5
+ras_srdft_spinpol True
+ras_omega 400
+ras_srdft_cor srpbe
+cis_convergence 6
+symmetry True
+sym_ignore False
+sym_tol 5
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.6695000000     0.0000000000    -0.0000000000
+    2      C      -0.6695000000    -0.0000000000     0.0000000000
+    3      H       1.2321000000     0.9289000000    -0.0000000000
+    4      H       1.2321000000    -0.9289000000    -0.0000000000
+    5      H      -1.2321000000     0.9289000000     0.0000000000
+    6      H      -1.2321000000    -0.9289000000     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D2h   NOp =  8
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =    33.2650904736 hartrees
+ There are        8 alpha and        8 beta electrons
+ Requested basis set is 6-31G
+ There are 14 shells and 26 basis functions
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size        63 MB
+ MEM_STATIC part        64 MB
+
+                       Distance Matrix (Angstroms)
+             C (  1)   C (  2)   H (  3)   H (  4)   H (  5)
+   C (  2)  1.339000
+   H (  3)  1.085990  2.116350
+   H (  4)  1.085990  2.116350  1.857800
+   H (  5)  2.116350  1.085990  2.464200  3.086050
+   H (  6)  2.116350  1.085990  3.086050  2.464200  1.857800
+
+ A cutoff of  1.0D-14 yielded    105 shell pairs
+ There are       375 function pairs
+
+ -------------------------------------------------------
+ OpenMP Integral Computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients                     0
+ long-range coefficients              100000000
+ Omega coefficients                           0
+ if combine SR and LR in K                    0
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                 45569
+ size of scratch memory is              2040132
+ max col of scratch BK array                289
+ max len of scratch array in speh3           22
+ max len of scratch index in speh4            8
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  1
+ order of int derivative is                   0
+ number of shells is                         14
+ number of basis is                          26
+ number of cartesian basis is                26
+ number of contracted shell pairs           105
+ number of primitive shell pairs            592
+ maxK2 (contraction) of shell pair           36
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair             16
+ max number of PS2 of shell pair             72
+ mem total for path MDJ                  505874
+ -------------------------------------------------------
+ Smallest overlap matrix eigenvalue = 9.71E-03
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000066 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 16.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 3 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -78.4023210083      1.81e-01
+    2     -77.9867285159      1.15e-02
+    3     -78.0025693536      2.58e-03
+    4     -78.0035202958      6.87e-04
+    5     -78.0035725237      1.02e-04
+    6     -78.0035744599      1.04e-05
+    7     -78.0035744840      1.54e-06
+    8     -78.0035744845      7.89e-08
+    9     -78.0035744845      5.86e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 2.46s  wall 1.00s
+ SCF   energy in the final basis set =      -78.0035744845
+ Total energy in the final basis set =      -78.0035744845
+
+     ##========================================##
+     ||                                        ||
+     ||              R A S M A N 2             ||
+     ||________________________________________||
+     ||                                        ||
+     ||  Author:                               ||
+     ||                                        ||
+     ||        David Casanova (2010)           ||
+     ||                                        ||
+     ##========================================##
+
+  ***************************************************
+  *  RAS-CI Dimensions:                             *
+  *                                                 *
+  *  Active Elec.:   2 ( 1, 1)   Active Orb.:   4   *
+  *  Doubly Occ. :   7           Doubly Vir.:  15   *
+  *  Frozen Occ. :   0           Frozen Vir.:   0   *
+  *                                                 *
+  *  Total CI configurations:        16             *
+  *    Active configurations:        16             *
+  *      Hole configurations:         0             *
+  *  Particle configurations:         0             *
+  *                                                 *
+  *   Requested states:        2                    *
+  *  Spin multiplicity: Any multiplicity            *
+  *                                                 *
+  ***************************************************
+
+*** RAS-srDFT calculation ***
+
+ Range separation parameter:  0.400 a.u.
+ Long-range RASCI + short-range DFT (exchange and correlation)
+ RAS-DFT converges when error is below  1.0E-06
+ Short-range DFT with spin polarized reference density
+ Averaging of alpha/beta short-range XC matrix
+
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0           2      0.017008    0.008505
+   2         1           1      0.000050    0.000050
+   3         1           1      0.000002    0.000002
+   4         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   1   Error: 1.37E-01
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   5         1           1      0.000011    0.000011
+   6         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   2   Error: 6.85E-02
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   7         1           1      0.000006    0.000006
+   8         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   3   Error: 3.42E-02
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   9         1           1      0.000003    0.000003
+  10         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   4   Error: 1.71E-02
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  11         1           1      0.000001    0.000001
+  12         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   5   Error: 8.56E-03
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  13         2           0      0.000001    0.000001    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   6   Error: 4.28E-03
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  14         1           1      0.000001    0.000001
+  15         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   7   Error: 2.14E-03
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  16         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   8   Error: 1.07E-03
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  17         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:   9   Error: 5.35E-04
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  18         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  10   Error: 2.68E-04
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  19         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  11   Error: 1.34E-04
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  20         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  12   Error: 6.69E-05
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  21         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  13   Error: 3.34E-05
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  22         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  14   Error: 1.67E-05
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  23         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  15   Error: 8.36E-06
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  24         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  16   Error: 4.18E-06
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  25         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  17   Error: 2.09E-06
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  26         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  18   Error: 1.04E-06
+ Exchange:     1.0000 Hartree-Fock
+ Correlation:  1.0000 srPBE
+ Using SG-1 standard quadrature grid
+
+Direct CI diagonalization
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+  27         2           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ RASCI-srDFT cycle:  19   Error: 5.22E-07
+ Convergence criterion meet for RAS-srDFT
+
+**************************************************
+ RAS-CI total energy for state   1:    -78.434262778193
+  Excitation energy (eV) =    0.0000
+  <S^2>      :  0.000000
+  Dipole Moment:   -0.0000 X    -0.0000 Y     0.0000 Z
+  Amplitudes :
+
+ | HOLE  | ALPHA | BETA  | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 1000  | 1000  |       |     0.9976907
+--------------------------------------------------
+*** Contributions RASCI wfn    Active: 100.00
+                                 Hole:   0.00
+                                 Part:   0.00
+
+**************************************************
+ RAS-CI total energy for state   2:    -78.219442581371
+  Excitation energy (eV) =    5.8456
+  <S^2>      :  2.000000
+  Dipole Moment:    0.0000 X    -0.0000 Y    -0.0000 Z
+  Trans. Moment:   -0.0000 X     0.0000 Y     0.0000 Z
+  Strength   :  0.000000
+  Amplitudes :
+
+ | HOLE  | ALPHA | BETA  | PART  |    AMPLITUDE
+--------------------------------------------------
+ |       | 1000  | 0100  |       |     0.7071068
+ |       | 0100  | 1000  |       |    -0.7071068
+--------------------------------------------------
+*** Contributions RASCI wfn    Active: 100.00
+                                 Hole:   0.00
+                                 Part:   0.00
+
+RAS-CI timing summary (seconds)
+  CPU time         15.75s
+  System time       0.00s
+  Wall time         7.43s
+
+
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+
+ Alpha MOs, Restricted
+ -- Occupied --
+-11.234 -11.232  -1.032  -0.787  -0.641  -0.581  -0.500  -0.371
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u
+ -- Virtual --
+  0.173   0.261   0.288   0.305   0.389   0.486   0.681   0.785
+  1 B2g   4 Ag    2 B2u   3 B3u   2 B1g   4 B3u   5 Ag    2 B1u
+  0.790   0.888   0.894   0.991   1.149   1.190   1.226   1.238
+  3 B2u   2 B2g   6 Ag    5 B3u   3 B1g   4 B2u   7 Ag    6 B3u
+  1.375   1.525
+  7 B3u   4 B1g
+
+ Beta MOs, Restricted
+ -- Occupied --
+-11.234 -11.232  -1.032  -0.787  -0.641  -0.581  -0.500  -0.371
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u
+ -- Virtual --
+  0.173   0.261   0.288   0.305   0.389   0.486   0.681   0.785
+  1 B2g   4 Ag    2 B2u   3 B3u   2 B1g   4 B3u   5 Ag    2 B1u
+  0.790   0.888   0.894   0.991   1.149   1.190   1.226   1.238
+  3 B2u   2 B2g   6 Ag    5 B3u   3 B1g   4 B2u   7 Ag    6 B3u
+  1.375   1.525
+  7 B3u   4 B1g
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.328746
+      2 C                    -0.328746
+      3 H                     0.164373
+      4 H                     0.164373
+      5 H                     0.164373
+      6 H                     0.164373
+  ----------------------------------------
+  Sum of atomic charges =    -0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -13.4551     XY       0.0000     YY     -12.3853
+        XZ       0.0000     YZ      -0.0000     ZZ     -15.9336
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY      -0.0000    XYY       0.0000
+       YYY      -0.0000    XXZ       0.0000    XYZ       0.0000
+       YYZ      -0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -70.3192   XXXY       0.0000   XXYY     -13.5749
+      XYYY       0.0000   YYYY     -26.3472   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ      -0.0000   YYYZ       0.0000
+      XXZZ     -16.5360   XYZZ       0.0000   YYZZ      -7.9584
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ     -17.6538
+ -----------------------------------------------------------------
+Archival summary:
+1\1\Aeria.local\SP\ProcedureUnspecified\6-31G\24\MonMay1020:26:252021MonMay1020:26:252021\0\\#,ProcedureUnspecified,6-31G,\\0,1\C\H,1,1.08599\H,1,1.08599,2,117.597\C,1,1.339,2,121.202,3,-180,0\H,4,1.08599,1,121.202,2,-0,0\H,4,1.08599,1,121.202,2,-180,0\\HF=-94.5912184\\@
+
+ Total job time:  9.18s(wall), 19.35s(cpu)
+ Mon May 10 20:26:25 2021
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+

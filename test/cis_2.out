@@ -1,0 +1,1261 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.2 (devel), Q-Chem, Inc., Pleasanton, CA (2019)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,
+ S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  E. J. Berquist,
+ K. B. Bravaya,  H. Burton,  D. Casanova,  Chun-Min Chang,  Yunqing Chen,
+ A. Chien,  K. D. Closser,  M. P. Coons,  S. Coriani,  S. Dasgupta,
+ A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  R. G. Edgar,  Po-Tung Fang,
+ S. Faraji,  S. Fatehi,  Qingguo Feng,  K. D. Fenk,  J. Fosso-Tande,
+ J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  J. Gomes,
+ J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,
+ P. H. P. Harbach,  A. W. Hauser,  J. E. Herr,  E. G. Hohenstein,
+ Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  Hyunjun Ji,
+ B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,
+ E. Livshits,  A. Luenser,  P. Manohar,  E. Mansoor,  S. F. Manzer,
+ Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  A. V. Marenich,
+ T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  N. J. Mayhall,
+ S. C. McKenzie,  J.-M. Mewes,  A. F. Morrison,  J. W. Mullinax,  K. Nanda,
+ T. S. Nguyen-Beck,  R. Olivares-Amaya,  J. A. Parkhill,  T. M. Perrine,
+ F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  D. R. Rehn,
+ F. Rob,  M. Schneider,  N. Sergueev,  S. M. Sharada,  S. Sharma,
+ D. W. Small,  T. Stauch,  T. Stein,  Yu-Chuan Su,  A. J. W. Thom,
+ A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,
+ Jeng-Da Chai,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above:
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.2.0 for Mac (Intel) OS X
+
+ Parts of Q-Chem use Armadillo 8.300.2 (Tropical Shenanigans).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon May 10 20:27:57 2021
+
+Host:
+0
+
+     Scratch files written to /Users/abel/Scratch/export/pyqchem_2754//
+Input Ideriv = 2
+Curr. Ideriv = -1
+Max.  Ideriv = 2
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+-2 1
+C	        0.0000000000         0.0000000000         0.0000000000
+$end
+$rem
+jobtype sp
+exchange b3lyp
+basis 6-31g**
+thresh 14
+scf_convergence 8
+scf_algorithm diis
+max_scf_cycles 50
+gui 2
+set_iter 30
+RPA False
+mem_total 2000
+mem_static 64
+n_frozen_virtual 0
+mom_start False
+skip_scfman False
+scf_guess_mix False
+n_frozen_core 0
+calc_soc 1
+cis_convergence 8
+cis_n_roots 8
+cis_singlets True
+cis_triplets True
+cis_ampl_anal False
+loc_cis_ov_separate False
+er_cis_numstate 0
+max_cis_cycles 30
+symmetry True
+sym_ignore False
+sym_tol 5
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000000000     0.0000000000     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 Kh    NOp =***
+ Largest Abelian Subgroup              D2h   NOp =  1
+ Nuclear Repulsion Energy =     0.0000000000 hartrees
+ There are        4 alpha and        4 beta electrons
+ Requested basis set is 6-31G(d,p)
+ There are 4 shells and 15 basis functions
+
+ Total QAlloc Memory Limit   2000 MB
+ Mega-Array Size        63 MB
+ MEM_STATIC part        64 MB
+ A cutoff of  1.0D-14 yielded     10 shell pairs
+ There are       147 function pairs
+
+ -------------------------------------------------------
+ OpenMP Integral Computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients                     0
+ long-range coefficients              100000000
+ Omega coefficients                           0
+ if combine SR and LR in K                    0
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                593474
+ size of scratch memory is              2361544
+ max col of scratch BK array               1296
+ max len of scratch array in speh3          155
+ max len of scratch index in speh4           18
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  2
+ order of int derivative is                   0
+ number of shells is                          4
+ number of basis is                          15
+ number of cartesian basis is                15
+ number of contracted shell pairs            10
+ number of primitive shell pairs             84
+ maxK2 (contraction) of shell pair           36
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair              1
+ max number of PS2 of shell pair             36
+ mem total for path MDJ                  507764
+ -------------------------------------------------------
+ Smallest overlap matrix eigenvalue = 4.76E-02
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 6.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky
+ -----------------------------------------------------------------------
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ using 4 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ -------------------------------------------------------
+ OpenMP BLAS3 based DFT computing Module
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1     -37.7293602278      1.96e-02
+    2     -37.1359279995      7.35e-02
+    3     -37.1724584366      6.64e-02
+    4     -37.3214315786      1.79e-02
+    5     -37.3327695197      2.13e-03
+    6     -37.3329393025      1.26e-04
+    7     -37.3329398637      1.52e-05
+    8     -37.3329398720      1.04e-06
+    9     -37.3329398721      1.49e-08
+   10     -37.3329398721      9.30e-12  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 5.03s  wall 1.00s
+ SCF   energy in the final basis set =      -37.3329398721
+ Total energy in the final basis set =      -37.3329398721
+
+ Direct TDDFT/TDA calculation will be performed
+ Exchange:     0.2000 Hartree-Fock + 0.0800 Slater + 0.7200 B88
+ Correlation:  0.1900 VWN1RPA + 0.8100 LYP
+ Using SG-1 standard quadrature grid
+ Triplet excitation energies requested
+ Singlet excitation energies requested
+ CIS energy converged when residual is below 10e- 8
+ NRoots was altered as:  8 -->  9
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         1           8      0.038751    0.007352
+   2         5           4      0.001185    0.000714
+   3         7           2      0.000045    0.000043
+   4         8           1      0.000000    0.000000
+   5         9           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+ Triplets done: starting singlet calculation
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   6         1           8      0.044303    0.021594
+   7         5           4      0.002154    0.001830
+   8         7           2      0.000086    0.000052
+   9         7           2      0.000001    0.000001
+  10         9           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+
+ ---------------------------------------------------
+         TDDFT/TDA Excitation Energies
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =   -1.6916
+ Total energy for state  1:                   -37.39510547 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  4) --> V(  1) amplitude =  0.9988
+
+ Excited state   2: excitation energy (eV) =   -1.6916
+ Total energy for state  2:                   -37.39510547 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  1) amplitude =  0.9988
+
+ Excited state   3: excitation energy (eV) =   -0.4922
+ Total energy for state  3:                   -37.35102625 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :    -0.0000000000
+    D(  4) --> V(  1) amplitude =  0.9995
+
+ Excited state   4: excitation energy (eV) =   -0.4922
+ Total energy for state  4:                   -37.35102625 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X   0.0000 Y  -0.0000 Z
+    Strength   :    -0.0000000000
+    D(  3) --> V(  1) amplitude =  0.9995
+
+ Excited state   5: excitation energy (eV) =    5.9991
+ Total energy for state  5:                   -37.11247582 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  2) --> V(  1) amplitude =  0.9967
+
+ Excited state   6: excitation energy (eV) =   10.7242
+ Total energy for state  6:                   -36.93883391 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X   0.0000 Y   1.4082 Z
+    Strength   :     0.5210296910
+    D(  2) --> V(  1) amplitude =  0.9955
+
+ Excited state   7: excitation energy (eV) =   14.6553
+ Total energy for state  7:                   -36.79436880 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  3) amplitude =  0.7004
+    D(  4) --> V(  4) amplitude = -0.7004
+
+ Excited state   8: excitation energy (eV) =   15.4645
+ Total energy for state  8:                   -36.76462970 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  4) amplitude = -0.7069
+    D(  4) --> V(  3) amplitude =  0.7069
+
+ Excited state   9: excitation energy (eV) =   15.4652
+ Total energy for state  9:                   -36.76460271 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  3) amplitude =  0.7069
+    D(  4) --> V(  4) amplitude =  0.7069
+
+ Excited state  10: excitation energy (eV) =   15.5932
+ Total energy for state 10:                   -36.75989944 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  4) --> V(  2) amplitude =  0.9988
+
+ Excited state  11: excitation energy (eV) =   15.5932
+ Total energy for state 11:                   -36.75989944 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  2) amplitude =  0.9988
+
+ Excited state  12: excitation energy (eV) =   16.1288
+ Total energy for state 12:                   -36.74021816 au
+    Multiplicity: Singlet
+    Trans. Mom.: -0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  4) --> V(  2) amplitude =  0.9995
+
+ Excited state  13: excitation energy (eV) =   16.1288
+ Total energy for state 13:                   -36.74021816 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  2) amplitude =  0.9995
+
+ Excited state  14: excitation energy (eV) =   16.6016
+ Total energy for state 14:                   -36.72284397 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  4) amplitude = -0.7071
+    D(  4) --> V(  3) amplitude =  0.7071
+
+ Excited state  15: excitation energy (eV) =   16.6020
+ Total energy for state 15:                   -36.72282630 au
+    Multiplicity: Singlet
+    Trans. Mom.: -0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  3) amplitude =  0.7071
+    D(  4) --> V(  4) amplitude =  0.7071
+
+ Excited state  16: excitation energy (eV) =   16.6486
+ Total energy for state 16:                   -36.72111355 au
+    Multiplicity: Singlet
+    Trans. Mom.: -0.0000 X  -0.0000 Y  -0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  4) amplitude =  0.7071
+    D(  4) --> V(  3) amplitude =  0.7071
+
+ Excited state  17: excitation energy (eV) =   16.6486
+ Total energy for state 17:                   -36.72111355 au
+    Multiplicity: Triplet
+    Trans. Mom.:  0.0000 X   0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  3) --> V(  4) amplitude =  0.7071
+    D(  4) --> V(  3) amplitude =  0.7071
+
+ Excited state  18: excitation energy (eV) =   21.5897
+ Total energy for state 18:                   -36.53953255 au
+    Multiplicity: Singlet
+    Trans. Mom.:  0.0000 X  -0.0000 Y   0.0000 Z
+    Strength   :     0.0000000000
+    D(  2) --> V(  5) amplitude =  0.5430
+    D(  3) --> V(  3) amplitude =  0.5937
+    D(  4) --> V(  4) amplitude = -0.5937
+
+ ---------------------------------------------------
+  SETman timing summary (seconds)
+  CPU time                 5.20s
+  System time              0.00s
+  Wall time                1.31s
+
+
+
+*********SPIN-ORBIT COUPLING JOB BEGINS HERE*********
+
+
+=======================================================================================
+    SPIN-ORBIT COUPLING BETWEEN THE SINGLET GROUND STATE AND EXCITED TRIPLET STATE
+=======================================================================================
+
+SOC between the singlet ground state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -0.000010i    cm-1
+T2(ms=0)      0.000000  +  0.000009i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  -0.000000i    cm-1
+T5(ms=0)      0.000000  +  0.000000i    cm-1
+T6(ms=0)      0.000000  +  0.000000i    cm-1
+T7(ms=0)      0.000000  +  -0.000017i    cm-1
+T8(ms=0)      0.000000  +  0.000014i    cm-1
+T9(ms=0)      0.000000  +  52.943884i    cm-1
+SOC between the singlet ground state and excited triplet states (ms=1):
+T1(ms=1)      0.000185  + (15.843929i)    cm-1
+T2(ms=1)      -15.843929  + (0.000185i)    cm-1
+T3(ms=1)      0.000000  + (0.000000i)    cm-1
+T4(ms=1)      -0.000000  + (0.000000i)    cm-1
+T5(ms=1)      0.000000  + (-0.000000i)    cm-1
+T6(ms=1)      -0.000001  + (-0.000001i)    cm-1
+T7(ms=1)      -0.000297  + (26.229727i)    cm-1
+T8(ms=1)      -26.229727  + (-0.000297i)    cm-1
+T9(ms=1)      0.000014  + (0.000017i)    cm-1
+SOC between the singlet ground state and excited triplet states (ms=-1):
+T1(ms=-1)     0.000185  - (15.843929i)    cm-1
+T2(ms=-1)     -15.843929  - (0.000185i)    cm-1
+T3(ms=-1)     0.000000  - (0.000000i)    cm-1
+T4(ms=-1)     -0.000000  - (0.000000i)    cm-1
+T5(ms=-1)     0.000000  - (-0.000000i)    cm-1
+T6(ms=-1)     -0.000001  - (-0.000001i)    cm-1
+T7(ms=-1)     -0.000297  - (26.229727i)    cm-1
+T8(ms=-1)     -26.229727  - (-0.000297i)    cm-1
+T9(ms=-1)     0.000014  - (0.000017i)    cm-1
+Total SOC between the singlet ground state and excited triplet states:
+T1      22.406699    cm-1
+T2      22.406699    cm-1
+T3      0.000000    cm-1
+T4      0.000000    cm-1
+T5      0.000000    cm-1
+T6      0.000001    cm-1
+T7      37.094436    cm-1
+T8      37.094436    cm-1
+T9      52.943884    cm-1
+
+
+
+
+=======================================================================================
+                     SPIN-ORBIT COUPLING BETWEEN EXCITED TRIPLET STATES
+=======================================================================================
+
+SOC between the T1 (ms=0) state and excited triplet states (ms=1):
+T2(ms=1)      0.000004  + (0.000005i)    cm-1
+T3(ms=1)      0.000000  + (0.000000i)    cm-1
+T4(ms=1)      0.000158  + (13.486620i)    cm-1
+T5(ms=1)      -13.611807  + (-0.000159i)    cm-1
+T6(ms=1)      0.000159  + (-13.611809i)    cm-1
+T7(ms=1)      -0.000000  + (-0.000000i)    cm-1
+T8(ms=1)      -0.000000  + (0.000000i)    cm-1
+T9(ms=1)      -13.612003  + (0.000159i)    cm-1
+SOC between the T1 (ms=0) state and excited triplet states (ms=-1):
+T2(ms=-1)     -0.000004  + (0.000005i)    cm-1
+T3(ms=-1)     -0.000000  + (0.000000i)    cm-1
+T4(ms=-1)     -0.000158  + (13.486620i)    cm-1
+T5(ms=-1)     13.611807  + (-0.000159i)    cm-1
+T6(ms=-1)     -0.000159  + (-13.611809i)    cm-1
+T7(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T8(ms=-1)     0.000000  + (0.000000i)    cm-1
+T9(ms=-1)     13.612003  + (0.000159i)    cm-1
+SOC between the T1 (ms=1) state and excited triplet states (ms=0):
+T2(ms=0)      -0.000004  + (0.000005i)    cm-1
+T3(ms=0)      -0.000000  + (0.000000i)    cm-1
+T4(ms=0)      -0.000158  + (13.486620i)    cm-1
+T5(ms=0)      13.611807  + (-0.000159i)    cm-1
+T6(ms=0)      -0.000159  + (-13.611809i)    cm-1
+T7(ms=0)      0.000000  + (-0.000000i)    cm-1
+T8(ms=0)      0.000000  + (0.000000i)    cm-1
+T9(ms=0)      13.612003  + (0.000159i)    cm-1
+SOC between the T1 (ms=1) state and excited triplet states (ms=1):
+T2(ms=1)      0.000000  + (15.458223i)    cm-1
+T3(ms=1)      0.000000  + (-0.000000i)    cm-1
+T4(ms=1)      0.000000  + (-0.000009i)    cm-1
+T5(ms=1)      0.000000  + (0.000007i)    cm-1
+T6(ms=1)      0.000000  + (0.000009i)    cm-1
+T7(ms=1)      0.000000  + (-0.000000i)    cm-1
+T8(ms=1)      0.000000  + (-0.011512i)    cm-1
+T9(ms=1)      0.000000  + (0.000007i)    cm-1
+SOC between the T1 (ms=-1) state and excited triplet states (ms=0):
+T2(ms=0)      0.000004  + (0.000005i)    cm-1
+T3(ms=0)      0.000000  + (0.000000i)    cm-1
+T4(ms=0)      0.000158  + (13.486620i)    cm-1
+T5(ms=0)      -13.611807  + (-0.000159i)    cm-1
+T6(ms=0)      0.000159  + (-13.611809i)    cm-1
+T7(ms=0)      -0.000000  + (-0.000000i)    cm-1
+T8(ms=0)      -0.000000  + (0.000000i)    cm-1
+T9(ms=0)      -13.612003  + (0.000159i)    cm-1
+SOC between the T1 (ms=-1) state and excited triplet states (ms=-1):
+T2(ms=-1)     0.000000  + (-15.458223i)    cm-1
+T3(ms=-1)     0.000000  + (0.000000i)    cm-1
+T4(ms=-1)     0.000000  + (0.000009i)    cm-1
+T5(ms=-1)     0.000000  + (-0.000007i)    cm-1
+T6(ms=-1)     0.000000  + (-0.000009i)    cm-1
+T7(ms=-1)     0.000000  + (0.000000i)    cm-1
+T8(ms=-1)     0.000000  + (0.011512i)    cm-1
+T9(ms=-1)     0.000000  + (-0.000007i)    cm-1
+Total SOC between the T1 state and excited triplet states:
+T2      21.861228    cm-1
+T3      0.000000    cm-1
+T4      26.973241    cm-1
+T5      27.223614    cm-1
+T6      27.223619    cm-1
+T7      0.000001    cm-1
+T8      0.016281    cm-1
+T9      27.224006    cm-1
+
+
+
+SOC between the T2 (ms=0) state and excited triplet states (ms=1):
+T3(ms=1)      -0.000000  + (-0.000000i)    cm-1
+T4(ms=1)      -13.486620  + (0.000158i)    cm-1
+T5(ms=1)      -0.000159  + (13.611807i)    cm-1
+T6(ms=1)      -13.611809  + (-0.000159i)    cm-1
+T7(ms=1)      -0.000000  + (0.000000i)    cm-1
+T8(ms=1)      0.000000  + (0.000000i)    cm-1
+T9(ms=1)      -0.000159  + (-13.612003i)    cm-1
+SOC between the T2 (ms=0) state and excited triplet states (ms=-1):
+T3(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T4(ms=-1)     13.486620  + (0.000158i)    cm-1
+T5(ms=-1)     0.000159  + (13.611807i)    cm-1
+T6(ms=-1)     13.611809  + (-0.000159i)    cm-1
+T7(ms=-1)     0.000000  + (0.000000i)    cm-1
+T8(ms=-1)     -0.000000  + (0.000000i)    cm-1
+T9(ms=-1)     0.000159  + (-13.612003i)    cm-1
+SOC between the T2 (ms=1) state and excited triplet states (ms=0):
+T3(ms=0)      0.000000  + (-0.000000i)    cm-1
+T4(ms=0)      13.486620  + (0.000158i)    cm-1
+T5(ms=0)      0.000159  + (13.611807i)    cm-1
+T6(ms=0)      13.611809  + (-0.000159i)    cm-1
+T7(ms=0)      0.000000  + (0.000000i)    cm-1
+T8(ms=0)      -0.000000  + (0.000000i)    cm-1
+T9(ms=0)      0.000159  + (-13.612003i)    cm-1
+SOC between the T2 (ms=1) state and excited triplet states (ms=1):
+T3(ms=1)      0.000000  + (-0.000000i)    cm-1
+T4(ms=1)      0.000000  + (0.000007i)    cm-1
+T5(ms=1)      0.000000  + (-0.000009i)    cm-1
+T6(ms=1)      0.000000  + (0.000007i)    cm-1
+T7(ms=1)      0.000000  + (0.011512i)    cm-1
+T8(ms=1)      0.000000  + (-0.000000i)    cm-1
+T9(ms=1)      0.000000  + (0.000009i)    cm-1
+SOC between the T2 (ms=-1) state and excited triplet states (ms=0):
+T3(ms=0)      -0.000000  + (-0.000000i)    cm-1
+T4(ms=0)      -13.486620  + (0.000158i)    cm-1
+T5(ms=0)      -0.000159  + (13.611807i)    cm-1
+T6(ms=0)      -13.611809  + (-0.000159i)    cm-1
+T7(ms=0)      -0.000000  + (0.000000i)    cm-1
+T8(ms=0)      0.000000  + (0.000000i)    cm-1
+T9(ms=0)      -0.000159  + (-13.612003i)    cm-1
+SOC between the T2 (ms=-1) state and excited triplet states (ms=-1):
+T3(ms=-1)     0.000000  + (0.000000i)    cm-1
+T4(ms=-1)     0.000000  + (-0.000007i)    cm-1
+T5(ms=-1)     0.000000  + (0.000009i)    cm-1
+T6(ms=-1)     0.000000  + (-0.000007i)    cm-1
+T7(ms=-1)     0.000000  + (-0.011512i)    cm-1
+T8(ms=-1)     0.000000  + (0.000000i)    cm-1
+T9(ms=-1)     0.000000  + (-0.000009i)    cm-1
+Total SOC between the T2 state and excited triplet states:
+T3      0.000000    cm-1
+T4      26.973241    cm-1
+T5      27.223614    cm-1
+T6      27.223619    cm-1
+T7      0.016281    cm-1
+T8      0.000001    cm-1
+T9      27.224006    cm-1
+
+
+
+SOC between the T3 (ms=0) state and excited triplet states (ms=1):
+T4(ms=1)      0.000000  + (0.000000i)    cm-1
+T5(ms=1)      -0.000000  + (-0.000000i)    cm-1
+T6(ms=1)      0.000000  + (-0.000000i)    cm-1
+T7(ms=1)      -0.000000  + (0.000000i)    cm-1
+T8(ms=1)      -0.000000  + (0.000000i)    cm-1
+T9(ms=1)      0.000000  + (0.000000i)    cm-1
+SOC between the T3 (ms=0) state and excited triplet states (ms=-1):
+T4(ms=-1)     -0.000000  + (0.000000i)    cm-1
+T5(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T6(ms=-1)     -0.000000  + (-0.000000i)    cm-1
+T7(ms=-1)     0.000000  + (0.000000i)    cm-1
+T8(ms=-1)     0.000000  + (0.000000i)    cm-1
+T9(ms=-1)     -0.000000  + (0.000000i)    cm-1
+SOC between the T3 (ms=1) state and excited triplet states (ms=0):
+T4(ms=0)      -0.000000  + (0.000000i)    cm-1
+T5(ms=0)      0.000000  + (-0.000000i)    cm-1
+T6(ms=0)      -0.000000  + (-0.000000i)    cm-1
+T7(ms=0)      0.000000  + (0.000000i)    cm-1
+T8(ms=0)      0.000000  + (0.000000i)    cm-1
+T9(ms=0)      -0.000000  + (0.000000i)    cm-1
+SOC between the T3 (ms=1) state and excited triplet states (ms=1):
+T4(ms=1)      0.000000  + (0.000000i)    cm-1
+T5(ms=1)      0.000000  + (-0.000000i)    cm-1
+T6(ms=1)      0.000000  + (0.000000i)    cm-1
+T7(ms=1)      0.000000  + (0.000000i)    cm-1
+T8(ms=1)      0.000000  + (-0.000000i)    cm-1
+T9(ms=1)      0.000000  + (0.000000i)    cm-1
+SOC between the T3 (ms=-1) state and excited triplet states (ms=0):
+T4(ms=0)      0.000000  + (0.000000i)    cm-1
+T5(ms=0)      -0.000000  + (-0.000000i)    cm-1
+T6(ms=0)      0.000000  + (-0.000000i)    cm-1
+T7(ms=0)      -0.000000  + (0.000000i)    cm-1
+T8(ms=0)      -0.000000  + (0.000000i)    cm-1
+T9(ms=0)      0.000000  + (0.000000i)    cm-1
+SOC between the T3 (ms=-1) state and excited triplet states (ms=-1):
+T4(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T5(ms=-1)     0.000000  + (0.000000i)    cm-1
+T6(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T7(ms=-1)     0.000000  + (-0.000000i)    cm-1
+T8(ms=-1)     0.000000  + (0.000000i)    cm-1
+T9(ms=-1)     0.000000  + (-0.000000i)    cm-1
+Total SOC between the T3 state and excited triplet states:
+T4      0.000000    cm-1
+T5      0.000000    cm-1
+T6      0.000000    cm-1
+T7      0.000000    cm-1
+T8      0.000000    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the T4 (ms=0) state and excited triplet states (ms=1):
+T5(ms=1)      -0.000000  + (0.000000i)    cm-1
+T6(ms=1)      0.000001  + (0.000001i)    cm-1
+T7(ms=1)      0.000293  + (-25.884278i)    cm-1
+T8(ms=1)      25.884278  + (0.000293i)    cm-1
+T9(ms=1)      -0.000018  + (-0.000022i)    cm-1
+SOC between the T4 (ms=0) state and excited triplet states (ms=-1):
+T5(ms=-1)     0.000000  + (0.000000i)    cm-1
+T6(ms=-1)     -0.000001  + (0.000001i)    cm-1
+T7(ms=-1)     -0.000293  + (-25.884278i)    cm-1
+T8(ms=-1)     -25.884278  + (0.000293i)    cm-1
+T9(ms=-1)     0.000018  + (-0.000022i)    cm-1
+SOC between the T4 (ms=1) state and excited triplet states (ms=0):
+T5(ms=0)      0.000000  + (0.000000i)    cm-1
+T6(ms=0)      -0.000001  + (0.000001i)    cm-1
+T7(ms=0)      -0.000293  + (-25.884278i)    cm-1
+T8(ms=0)      -25.884278  + (0.000293i)    cm-1
+T9(ms=0)      0.000018  + (-0.000022i)    cm-1
+SOC between the T4 (ms=1) state and excited triplet states (ms=1):
+T5(ms=1)      0.000000  + (-0.000000i)    cm-1
+T6(ms=1)      0.000000  + (-0.000000i)    cm-1
+T7(ms=1)      0.000000  + (0.000017i)    cm-1
+T8(ms=1)      0.000000  + (-0.000014i)    cm-1
+T9(ms=1)      0.000000  + (-67.494218i)    cm-1
+SOC between the T4 (ms=-1) state and excited triplet states (ms=0):
+T5(ms=0)      -0.000000  + (0.000000i)    cm-1
+T6(ms=0)      0.000001  + (0.000001i)    cm-1
+T7(ms=0)      0.000293  + (-25.884278i)    cm-1
+T8(ms=0)      25.884278  + (0.000293i)    cm-1
+T9(ms=0)      -0.000018  + (-0.000022i)    cm-1
+SOC between the T4 (ms=-1) state and excited triplet states (ms=-1):
+T5(ms=-1)     0.000000  + (0.000000i)    cm-1
+T6(ms=-1)     0.000000  + (0.000000i)    cm-1
+T7(ms=-1)     0.000000  + (-0.000017i)    cm-1
+T8(ms=-1)     0.000000  + (0.000014i)    cm-1
+T9(ms=-1)     0.000000  + (67.494218i)    cm-1
+Total SOC between the T4 state and excited triplet states:
+T5      0.000001    cm-1
+T6      0.000002    cm-1
+T7      51.768557    cm-1
+T8      51.768557    cm-1
+T9      95.451238    cm-1
+
+
+
+SOC between the T5 (ms=0) state and excited triplet states (ms=1):
+T6(ms=1)      -0.000011  + (-0.000012i)    cm-1
+T7(ms=1)      26.123641  + (-0.000296i)    cm-1
+T8(ms=1)      -0.000296  + (-26.123640i)    cm-1
+T9(ms=1)      0.000000  + (0.000000i)    cm-1
+SOC between the T5 (ms=0) state and excited triplet states (ms=-1):
+T6(ms=-1)     0.000011  + (-0.000012i)    cm-1
+T7(ms=-1)     -26.123641  + (-0.000296i)    cm-1
+T8(ms=-1)     0.000296  + (-26.123640i)    cm-1
+T9(ms=-1)     -0.000000  + (0.000000i)    cm-1
+SOC between the T5 (ms=1) state and excited triplet states (ms=0):
+T6(ms=0)      0.000011  + (-0.000012i)    cm-1
+T7(ms=0)      -26.123641  + (-0.000296i)    cm-1
+T8(ms=0)      0.000296  + (-26.123640i)    cm-1
+T9(ms=0)      -0.000000  + (0.000000i)    cm-1
+SOC between the T5 (ms=1) state and excited triplet states (ms=1):
+T6(ms=1)      0.000000  + (-37.187032i)    cm-1
+T7(ms=1)      0.000000  + (-0.000015i)    cm-1
+T8(ms=1)      0.000000  + (0.000018i)    cm-1
+T9(ms=1)      0.000000  + (-0.000000i)    cm-1
+SOC between the T5 (ms=-1) state and excited triplet states (ms=0):
+T6(ms=0)      -0.000011  + (-0.000012i)    cm-1
+T7(ms=0)      26.123641  + (-0.000296i)    cm-1
+T8(ms=0)      -0.000296  + (-26.123640i)    cm-1
+T9(ms=0)      0.000000  + (0.000000i)    cm-1
+SOC between the T5 (ms=-1) state and excited triplet states (ms=-1):
+T6(ms=-1)     0.000000  + (37.187032i)    cm-1
+T7(ms=-1)     0.000000  + (0.000015i)    cm-1
+T8(ms=-1)     0.000000  + (-0.000018i)    cm-1
+T9(ms=-1)     0.000000  + (0.000000i)    cm-1
+Total SOC between the T5 state and excited triplet states:
+T6      52.590405    cm-1
+T7      52.247281    cm-1
+T8      52.247281    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the T6 (ms=0) state and excited triplet states (ms=1):
+T7(ms=1)      0.000296  + (26.123647i)    cm-1
+T8(ms=1)      26.123647  + (-0.000296i)    cm-1
+T9(ms=1)      0.000001  + (-0.000001i)    cm-1
+SOC between the T6 (ms=0) state and excited triplet states (ms=-1):
+T7(ms=-1)     -0.000296  + (26.123647i)    cm-1
+T8(ms=-1)     -26.123647  + (-0.000296i)    cm-1
+T9(ms=-1)     -0.000001  + (-0.000001i)    cm-1
+SOC between the T6 (ms=1) state and excited triplet states (ms=0):
+T7(ms=0)      -0.000296  + (26.123647i)    cm-1
+T8(ms=0)      -26.123647  + (-0.000296i)    cm-1
+T9(ms=0)      -0.000001  + (-0.000001i)    cm-1
+SOC between the T6 (ms=1) state and excited triplet states (ms=1):
+T7(ms=1)      0.000000  + (-0.000017i)    cm-1
+T8(ms=1)      0.000000  + (-0.000014i)    cm-1
+T9(ms=1)      0.000000  + (-0.000000i)    cm-1
+SOC between the T6 (ms=-1) state and excited triplet states (ms=0):
+T7(ms=0)      0.000296  + (26.123647i)    cm-1
+T8(ms=0)      26.123647  + (-0.000296i)    cm-1
+T9(ms=0)      0.000001  + (-0.000001i)    cm-1
+SOC between the T6 (ms=-1) state and excited triplet states (ms=-1):
+T7(ms=-1)     0.000000  + (0.000017i)    cm-1
+T8(ms=-1)     0.000000  + (0.000014i)    cm-1
+T9(ms=-1)     0.000000  + (0.000000i)    cm-1
+Total SOC between the T6 state and excited triplet states:
+T7      52.247294    cm-1
+T8      52.247294    cm-1
+T9      0.000002    cm-1
+
+
+
+SOC between the T7 (ms=0) state and excited triplet states (ms=1):
+T8(ms=1)      0.000005  + (0.000005i)    cm-1
+T9(ms=1)      -26.127756  + (-0.000296i)    cm-1
+SOC between the T7 (ms=0) state and excited triplet states (ms=-1):
+T8(ms=-1)     -0.000005  + (0.000005i)    cm-1
+T9(ms=-1)     26.127756  + (-0.000296i)    cm-1
+SOC between the T7 (ms=1) state and excited triplet states (ms=0):
+T8(ms=0)      -0.000005  + (0.000005i)    cm-1
+T9(ms=0)      26.127756  + (-0.000296i)    cm-1
+SOC between the T7 (ms=1) state and excited triplet states (ms=1):
+T8(ms=1)      0.000000  + (15.458785i)    cm-1
+T9(ms=1)      0.000000  + (0.000014i)    cm-1
+SOC between the T7 (ms=-1) state and excited triplet states (ms=0):
+T8(ms=0)      0.000005  + (0.000005i)    cm-1
+T9(ms=0)      -26.127756  + (-0.000296i)    cm-1
+SOC between the T7 (ms=-1) state and excited triplet states (ms=-1):
+T8(ms=-1)     0.000000  + (-15.458785i)    cm-1
+T9(ms=-1)     0.000000  + (-0.000014i)    cm-1
+Total SOC between the T7 state and excited triplet states:
+T8      21.862023    cm-1
+T9      52.255512    cm-1
+
+
+
+SOC between the T8 (ms=0) state and excited triplet states (ms=1):
+T9(ms=1)      0.000296  + (-26.127756i)    cm-1
+SOC between the T8 (ms=0) state and excited triplet states (ms=-1):
+T9(ms=-1)     -0.000296  + (-26.127756i)    cm-1
+SOC between the T8 (ms=1) state and excited triplet states (ms=0):
+T9(ms=0)      -0.000296  + (-26.127756i)    cm-1
+SOC between the T8 (ms=1) state and excited triplet states (ms=1):
+T9(ms=1)      0.000000  + (0.000017i)    cm-1
+SOC between the T8 (ms=-1) state and excited triplet states (ms=0):
+T9(ms=0)      0.000296  + (-26.127756i)    cm-1
+SOC between the T8 (ms=-1) state and excited triplet states (ms=-1):
+T9(ms=-1)     0.000000  + (-0.000017i)    cm-1
+Total SOC between the T8 state and excited triplet states:
+T9      52.255512    cm-1
+
+
+
+
+
+
+
+=======================================================================================
+         SPIN-ORBIT COUPLING BETWEEN EXCITED SINGLET STATES AND TRIPLET STATES
+=======================================================================================
+
+SOC between the S1 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -0.000077i    cm-1
+T2(ms=0)      0.000000  +  15.462877i    cm-1
+T3(ms=0)      0.000000  +  -0.000000i    cm-1
+T4(ms=0)      0.000000  +  0.000008i    cm-1
+T5(ms=0)      0.000000  +  -0.000007i    cm-1
+T6(ms=0)      0.000000  +  -0.000008i    cm-1
+T7(ms=0)      0.000000  +  -0.000004i    cm-1
+T8(ms=0)      0.000000  +  -0.224681i    cm-1
+T9(ms=0)      0.000000  +  -0.000007i    cm-1
+SOC between the S1 state and excited triplet states (ms=1):
+T1(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T2(ms=1)      (-0.000004)  + (-0.000005i)    cm-1
+T3(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T4(ms=1)      (0.000088)  + (13.121981i)    cm-1
+T5(ms=1)      (-13.242513)  + (-0.000089i)    cm-1
+T6(ms=1)      (0.000089)  + (-13.242518i)    cm-1
+T7(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T8(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T9(ms=1)      (-13.247963)  + (0.000089i)    cm-1
+SOC between the S1 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T2(ms=-1)    -(-0.000004)  + (-0.000005i)    cm-1
+T3(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T4(ms=-1)    -(0.000088)  + (13.121981i)    cm-1
+T5(ms=-1)    -(-13.242513)  + (-0.000089i)    cm-1
+T6(ms=-1)    -(0.000089)  + (-13.242518i)    cm-1
+T7(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T8(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T9(ms=-1)    -(-13.247963)  + (0.000089i)    cm-1
+Total SOC between the S1 state and excited triplet states:
+T1      0.000077    cm-1
+T2      15.462877    cm-1
+T3      0.000000    cm-1
+T4      18.557283    cm-1
+T5      18.727741    cm-1
+T6      18.727749    cm-1
+T7      0.000004    cm-1
+T8      0.224681    cm-1
+T9      18.735449    cm-1
+
+
+
+SOC between the S2 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -15.462877i    cm-1
+T2(ms=0)      0.000000  +  -0.000077i    cm-1
+T3(ms=0)      0.000000  +  -0.000000i    cm-1
+T4(ms=0)      0.000000  +  -0.000007i    cm-1
+T5(ms=0)      0.000000  +  0.000008i    cm-1
+T6(ms=0)      0.000000  +  -0.000007i    cm-1
+T7(ms=0)      0.000000  +  0.224681i    cm-1
+T8(ms=0)      0.000000  +  -0.000004i    cm-1
+T9(ms=0)      0.000000  +  -0.000008i    cm-1
+SOC between the S2 state and excited triplet states (ms=1):
+T1(ms=1)      (0.000004)  + (0.000005i)    cm-1
+T2(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T3(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T4(ms=1)      (-13.121981)  + (0.000088i)    cm-1
+T5(ms=1)      (-0.000089)  + (13.242513i)    cm-1
+T6(ms=1)      (-13.242518)  + (-0.000089i)    cm-1
+T7(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T8(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T9(ms=1)      (-0.000089)  + (-13.247963i)    cm-1
+SOC between the S2 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(0.000004)  + (0.000005i)    cm-1
+T2(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T3(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T4(ms=-1)    -(-13.121981)  + (0.000088i)    cm-1
+T5(ms=-1)    -(-0.000089)  + (13.242513i)    cm-1
+T6(ms=-1)    -(-13.242518)  + (-0.000089i)    cm-1
+T7(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T8(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T9(ms=-1)    -(-0.000089)  + (-13.247963i)    cm-1
+Total SOC between the S2 state and excited triplet states:
+T1      15.462877    cm-1
+T2      0.000077    cm-1
+T3      0.000000    cm-1
+T4      18.557283    cm-1
+T5      18.727741    cm-1
+T6      18.727749    cm-1
+T7      0.224681    cm-1
+T8      0.000004    cm-1
+T9      18.735449    cm-1
+
+
+
+SOC between the S3 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  0.000000i    cm-1
+T2(ms=0)      0.000000  +  0.000000i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  -0.000000i    cm-1
+T5(ms=0)      0.000000  +  -0.000000i    cm-1
+T6(ms=0)      0.000000  +  -0.000000i    cm-1
+T7(ms=0)      0.000000  +  -0.000000i    cm-1
+T8(ms=0)      0.000000  +  -0.000000i    cm-1
+T9(ms=0)      0.000000  +  0.000000i    cm-1
+SOC between the S3 state and excited triplet states (ms=1):
+T1(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T2(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T3(ms=1)      (-0.000000)  + (0.000000i)    cm-1
+T4(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T5(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T6(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T7(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T8(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T9(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+SOC between the S3 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T2(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T3(ms=-1)    -(-0.000000)  + (0.000000i)    cm-1
+T4(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T5(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T6(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T7(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T8(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T9(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+Total SOC between the S3 state and excited triplet states:
+T1      0.000000    cm-1
+T2      0.000000    cm-1
+T3      0.000000    cm-1
+T4      0.000000    cm-1
+T5      0.000000    cm-1
+T6      0.000000    cm-1
+T7      0.000000    cm-1
+T8      0.000000    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the S4 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -0.000004i    cm-1
+T2(ms=0)      0.000000  +  0.217875i    cm-1
+T3(ms=0)      0.000000  +  -0.000000i    cm-1
+T4(ms=0)      0.000000  +  0.000017i    cm-1
+T5(ms=0)      0.000000  +  -0.000014i    cm-1
+T6(ms=0)      0.000000  +  -0.000016i    cm-1
+T7(ms=0)      0.000000  +  0.000066i    cm-1
+T8(ms=0)      0.000000  +  15.465973i    cm-1
+T9(ms=0)      0.000000  +  -0.000014i    cm-1
+SOC between the S4 state and excited triplet states (ms=1):
+T1(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T2(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T3(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T4(ms=1)      (-0.000183)  + (26.079733i)    cm-1
+T5(ms=1)      (-26.320181)  + (0.000185i)    cm-1
+T6(ms=1)      (-0.000185)  + (-26.320189i)    cm-1
+T7(ms=1)      (-0.000000)  + (-0.000001i)    cm-1
+T8(ms=1)      (-0.000004)  + (-0.000004i)    cm-1
+T9(ms=1)      (-26.327317)  + (-0.000185i)    cm-1
+SOC between the S4 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T2(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T3(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T4(ms=-1)    -(-0.000183)  + (26.079733i)    cm-1
+T5(ms=-1)    -(-26.320181)  + (0.000185i)    cm-1
+T6(ms=-1)    -(-0.000185)  + (-26.320189i)    cm-1
+T7(ms=-1)    -(-0.000000)  + (-0.000001i)    cm-1
+T8(ms=-1)    -(-0.000004)  + (-0.000004i)    cm-1
+T9(ms=-1)    -(-26.327317)  + (-0.000185i)    cm-1
+Total SOC between the S4 state and excited triplet states:
+T1      0.000004    cm-1
+T2      0.217875    cm-1
+T3      0.000000    cm-1
+T4      36.882312    cm-1
+T5      37.222356    cm-1
+T6      37.222368    cm-1
+T7      0.000066    cm-1
+T8      15.465973    cm-1
+T9      37.232449    cm-1
+
+
+
+SOC between the S5 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -0.217875i    cm-1
+T2(ms=0)      0.000000  +  -0.000004i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  -0.000014i    cm-1
+T5(ms=0)      0.000000  +  0.000016i    cm-1
+T6(ms=0)      0.000000  +  -0.000014i    cm-1
+T7(ms=0)      0.000000  +  -15.465973i    cm-1
+T8(ms=0)      0.000000  +  0.000066i    cm-1
+T9(ms=0)      0.000000  +  -0.000017i    cm-1
+SOC between the S5 state and excited triplet states (ms=1):
+T1(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T2(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T3(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T4(ms=1)      (-26.079733)  + (-0.000183i)    cm-1
+T5(ms=1)      (0.000185)  + (26.320180i)    cm-1
+T6(ms=1)      (-26.320189)  + (0.000185i)    cm-1
+T7(ms=1)      (0.000004)  + (0.000005i)    cm-1
+T8(ms=1)      (0.000001)  + (0.000000i)    cm-1
+T9(ms=1)      (0.000185)  + (-26.327318i)    cm-1
+SOC between the S5 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T2(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T3(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T4(ms=-1)    -(-26.079733)  + (-0.000183i)    cm-1
+T5(ms=-1)    -(0.000185)  + (26.320180i)    cm-1
+T6(ms=-1)    -(-26.320189)  + (0.000185i)    cm-1
+T7(ms=-1)    -(0.000004)  + (0.000005i)    cm-1
+T8(ms=-1)    -(0.000001)  + (0.000000i)    cm-1
+T9(ms=-1)    -(0.000185)  + (-26.327318i)    cm-1
+Total SOC between the S5 state and excited triplet states:
+T1      0.217875    cm-1
+T2      0.000004    cm-1
+T3      0.000000    cm-1
+T4      36.882312    cm-1
+T5      37.222356    cm-1
+T6      37.222368    cm-1
+T7      15.465973    cm-1
+T8      0.000066    cm-1
+T9      37.232450    cm-1
+
+
+
+SOC between the S6 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  0.000007i    cm-1
+T2(ms=0)      0.000000  +  -0.000009i    cm-1
+T3(ms=0)      0.000000  +  -0.000000i    cm-1
+T4(ms=0)      0.000000  +  -0.000004i    cm-1
+T5(ms=0)      0.000000  +  -0.000000i    cm-1
+T6(ms=0)      0.000000  +  68.116904i    cm-1
+T7(ms=0)      0.000000  +  0.000016i    cm-1
+T8(ms=0)      0.000000  +  -0.000018i    cm-1
+T9(ms=0)      0.000000  +  0.000000i    cm-1
+SOC between the S6 state and excited triplet states (ms=1):
+T1(ms=1)      (13.612309)  + (0.000159i)    cm-1
+T2(ms=1)      (0.000159)  + (-13.612306i)    cm-1
+T3(ms=1)      (-0.000000)  + (0.000000i)    cm-1
+T4(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T5(ms=1)      (-0.000000)  + (0.000000i)    cm-1
+T6(ms=1)      (-0.000019)  + (-0.000022i)    cm-1
+T7(ms=1)      (26.128028)  + (-0.000296i)    cm-1
+T8(ms=1)      (-0.000296)  + (-26.128023i)    cm-1
+T9(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+SOC between the S6 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(13.612309)  + (0.000159i)    cm-1
+T2(ms=-1)    -(0.000159)  + (-13.612306i)    cm-1
+T3(ms=-1)    -(-0.000000)  + (0.000000i)    cm-1
+T4(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T5(ms=-1)    -(-0.000000)  + (0.000000i)    cm-1
+T6(ms=-1)    -(-0.000019)  + (-0.000022i)    cm-1
+T7(ms=-1)    -(26.128028)  + (-0.000296i)    cm-1
+T8(ms=-1)    -(-0.000296)  + (-26.128023i)    cm-1
+T9(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+Total SOC between the S6 state and excited triplet states:
+T1      19.250712    cm-1
+T2      19.250708    cm-1
+T3      0.000000    cm-1
+T4      0.000004    cm-1
+T5      0.000000    cm-1
+T6      68.116904    cm-1
+T7      36.950612    cm-1
+T8      36.950604    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the S7 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  0.000009i    cm-1
+T2(ms=0)      0.000000  +  0.000007i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  0.000000i    cm-1
+T5(ms=0)      0.000000  +  -68.116878i    cm-1
+T6(ms=0)      0.000000  +  -0.000000i    cm-1
+T7(ms=0)      0.000000  +  0.000017i    cm-1
+T8(ms=0)      0.000000  +  0.000014i    cm-1
+T9(ms=0)      0.000000  +  0.000000i    cm-1
+SOC between the S7 state and excited triplet states (ms=1):
+T1(ms=1)      (-0.000159)  + (13.612306i)    cm-1
+T2(ms=1)      (13.612306)  + (0.000159i)    cm-1
+T3(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T4(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T5(ms=1)      (0.000018)  + (0.000022i)    cm-1
+T6(ms=1)      (0.000001)  + (-0.000001i)    cm-1
+T7(ms=1)      (0.000296)  + (26.128025i)    cm-1
+T8(ms=1)      (26.128025)  + (-0.000296i)    cm-1
+T9(ms=1)      (-0.000000)  + (0.000000i)    cm-1
+SOC between the S7 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(-0.000159)  + (13.612306i)    cm-1
+T2(ms=-1)    -(13.612306)  + (0.000159i)    cm-1
+T3(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T4(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T5(ms=-1)    -(0.000018)  + (0.000022i)    cm-1
+T6(ms=-1)    -(0.000001)  + (-0.000001i)    cm-1
+T7(ms=-1)    -(0.000296)  + (26.128025i)    cm-1
+T8(ms=-1)    -(26.128025)  + (-0.000296i)    cm-1
+T9(ms=-1)    -(-0.000000)  + (0.000000i)    cm-1
+Total SOC between the S7 state and excited triplet states:
+T1      19.250708    cm-1
+T2      19.250708    cm-1
+T3      0.000000    cm-1
+T4      0.000000    cm-1
+T5      68.116878    cm-1
+T6      0.000002    cm-1
+T7      36.950607    cm-1
+T8      36.950607    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the S8 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  0.000007i    cm-1
+T2(ms=0)      0.000000  +  0.000009i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  -36.845943i    cm-1
+T5(ms=0)      0.000000  +  -0.000000i    cm-1
+T6(ms=0)      0.000000  +  -0.000007i    cm-1
+T7(ms=0)      0.000000  +  0.000014i    cm-1
+T8(ms=0)      0.000000  +  0.000017i    cm-1
+T9(ms=0)      0.000000  +  0.000000i    cm-1
+SOC between the S8 state and excited triplet states (ms=1):
+T1(ms=1)      (13.612002)  + (-0.000159i)    cm-1
+T2(ms=1)      (0.000159)  + (13.612004i)    cm-1
+T3(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T4(ms=1)      (0.000010)  + (0.000012i)    cm-1
+T5(ms=1)      (-0.000000)  + (-0.000000i)    cm-1
+T6(ms=1)      (-0.000001)  + (0.000001i)    cm-1
+T7(ms=1)      (26.127753)  + (0.000296i)    cm-1
+T8(ms=1)      (-0.000296)  + (26.127759i)    cm-1
+T9(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+SOC between the S8 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(13.612002)  + (-0.000159i)    cm-1
+T2(ms=-1)    -(0.000159)  + (13.612004i)    cm-1
+T3(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T4(ms=-1)    -(0.000010)  + (0.000012i)    cm-1
+T5(ms=-1)    -(-0.000000)  + (-0.000000i)    cm-1
+T6(ms=-1)    -(-0.000001)  + (0.000001i)    cm-1
+T7(ms=-1)    -(26.127753)  + (0.000296i)    cm-1
+T8(ms=-1)    -(-0.000296)  + (26.127759i)    cm-1
+T9(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+Total SOC between the S8 state and excited triplet states:
+T1      19.250277    cm-1
+T2      19.250281    cm-1
+T3      0.000000    cm-1
+T4      36.845943    cm-1
+T5      0.000000    cm-1
+T6      0.000007    cm-1
+T7      36.950223    cm-1
+T8      36.950231    cm-1
+T9      0.000000    cm-1
+
+
+
+SOC between the S9 state and excited triplet states (ms=0):
+T1(ms=0)      0.000000  +  -0.000007i    cm-1
+T2(ms=0)      0.000000  +  0.000006i    cm-1
+T3(ms=0)      0.000000  +  0.000000i    cm-1
+T4(ms=0)      0.000000  +  0.000000i    cm-1
+T5(ms=0)      0.000000  +  0.000000i    cm-1
+T6(ms=0)      0.000000  +  0.000000i    cm-1
+T7(ms=0)      0.000000  +  -0.000014i    cm-1
+T8(ms=0)      0.000000  +  0.000012i    cm-1
+T9(ms=0)      0.000000  +  31.231132i    cm-1
+SOC between the S9 state and excited triplet states (ms=1):
+T1(ms=1)      (-0.000134)  + (-11.430357i)    cm-1
+T2(ms=1)      (11.430357)  + (-0.000134i)    cm-1
+T3(ms=1)      (0.000000)  + (0.000000i)    cm-1
+T4(ms=1)      (0.000000)  + (-0.000000i)    cm-1
+T5(ms=1)      (-0.000000)  + (0.000000i)    cm-1
+T6(ms=1)      (0.000001)  + (0.000000i)    cm-1
+T7(ms=1)      (0.000248)  + (-21.938809i)    cm-1
+T8(ms=1)      (21.938809)  + (0.000248i)    cm-1
+T9(ms=1)      (-0.000008)  + (-0.000010i)    cm-1
+SOC between the S9 state and excited triplet states (ms=-1):
+T1(ms=-1)    -(-0.000134)  + (-11.430357i)    cm-1
+T2(ms=-1)    -(11.430357)  + (-0.000134i)    cm-1
+T3(ms=-1)    -(0.000000)  + (0.000000i)    cm-1
+T4(ms=-1)    -(0.000000)  + (-0.000000i)    cm-1
+T5(ms=-1)    -(-0.000000)  + (0.000000i)    cm-1
+T6(ms=-1)    -(0.000001)  + (0.000000i)    cm-1
+T7(ms=-1)    -(0.000248)  + (-21.938809i)    cm-1
+T8(ms=-1)    -(21.938809)  + (0.000248i)    cm-1
+T9(ms=-1)    -(-0.000008)  + (-0.000010i)    cm-1
+Total SOC between the S9 state and excited triplet states:
+T1      16.164966    cm-1
+T2      16.164966    cm-1
+T3      0.000000    cm-1
+T4      0.000000    cm-1
+T5      0.000000    cm-1
+T6      0.000001    cm-1
+T7      31.026161    cm-1
+T8      31.026161    cm-1
+T9      31.231132    cm-1
+
+
+
+
+
+
+            *********SOC CODE ENDS HERE*********
+
+
+
+
+ --------------------------------------------------------------
+
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+
+ Alpha MOs
+ -- Occupied --
+ -9.4392   0.2541   0.5643   0.5643
+ -- Virtual --
+  0.6086   1.2489   1.2617   1.2617   1.2863   2.4977   2.4977   2.4987
+  2.5287   2.5287   4.6040
+ --------------------------------------------------------------
+
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -2.000000
+  ----------------------------------------
+  Sum of atomic charges =    -2.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -9.6064
+    Dipole Moment (Debye)
+         X       0.0000      Y      -0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -13.8241     XY       0.0000     YY     -13.8241
+        XZ       0.0000     YZ       0.0000     ZZ      -8.5864
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY      -0.0000    XYY       0.0000
+       YYY      -0.0000    XXZ       0.0000    XYZ       0.0000
+       YYZ       0.0000    XZZ      -0.0000    YZZ      -0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -19.8835   XXXY       0.0000   XXYY      -6.6278
+      XYYY       0.0000   YYYY     -19.8835   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ       0.0000   YYYZ       0.0000
+      XXZZ      -4.8059   XYZZ       0.0000   YYZZ      -4.8059
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ      -8.9521
+ -----------------------------------------------------------------
+
+ STANDARD THERMODYNAMIC QUANTITIES AT   298.15 K  AND     1.00 ATM
+
+   Translational Enthalpy:        0.889 kcal/mol
+   Rotational Enthalpy:           0.000 kcal/mol
+   Vibrational Enthalpy:          0.000 kcal/mol
+   gas constant (RT):             0.592 kcal/mol
+   Translational Entropy:        33.398  cal/mol.K
+   Rotational Entropy:            0.000  cal/mol.K
+   Vibrational Entropy:           0.000  cal/mol.K
+
+   Total Enthalpy:                1.481 kcal/mol
+   Total Entropy:                33.398  cal/mol.K
+
+ -----------------------------------------------------------------
+
+Archival summary:
+1\1\Aeria.local\SP\ProcedureUnspecified\6-31G**\1(2-,1)\MonMay1020:28:002021MonMay1020:28:002021\0\\#,ProcedureUnspecified,6-31G**,\\-2,1\C\\\@
+
+ Total job time:  3.61s(wall), 11.62s(cpu)
+ Mon May 10 20:28:00 2021
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
