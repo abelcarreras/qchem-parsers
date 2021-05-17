@@ -3,7 +3,17 @@ import numpy as np
 import re
 
 
-def parser_irc(output, print_data=False):
+def parser_irc(output):
+    """
+    Parser for IRC
+
+    Include:
+    - IRC forward trajectory (energy, structure)
+    - IRC backward trajectory (energy, structure)
+
+    :param output: the Q-Chem output
+    :return: parsed data
+    """
 
     branch_mark = True
     data_dict = {}

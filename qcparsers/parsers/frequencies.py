@@ -6,9 +6,14 @@ def parser_frequencies(output, print_data=False):
     """
     Parser for frequencies calculations
 
-    :param output:
-    :param print_data:
-    :return:
+    Include:
+    - Normal modes displacements
+    - Normal modes frequencies
+    - IR data
+    - Force constants
+
+    :param output: the Q-Chem output
+    :return: parsed data
     """
 
     # Coordinates

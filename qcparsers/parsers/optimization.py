@@ -3,7 +3,21 @@ import numpy as np
 import re
 
 
-def parser_optimization(output, print_data=False):
+def parser_optimization(output):
+    """
+    Parser for optimization
+
+    Include:
+    - Optimized structure
+    - Optimization trajectory
+    - Final energy
+    - S^2
+    - Gradient
+    - Displacement
+
+    :param output: the Q-Chem output
+    :return: parsed data
+    """
 
     data_dict = {}
 

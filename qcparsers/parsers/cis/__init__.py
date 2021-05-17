@@ -11,8 +11,14 @@ def parser_cis(output):
     """
     Parser for CIS/TD-DFT calculations
 
-    :param output:
-    :return:
+    Include:
+    - Diabatization scheme data
+    - Structure
+    - Adiabatic states
+    - SOC
+
+    :param output: the Q-Chem output
+    :return: parsed data
     """
     data_dict = {}
 

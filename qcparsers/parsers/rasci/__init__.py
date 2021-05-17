@@ -14,7 +14,7 @@ def parser_rasci(output):
     - Adiabatic states
     - SOC
 
-    :param output:
+    :param output: parsed data
     :return:
     """
 
